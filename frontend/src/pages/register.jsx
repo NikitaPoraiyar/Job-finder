@@ -14,7 +14,8 @@ export default function Register(){
     const handleSubmit = async(event) => {
         event.preventDefault()
         try{
-            const res = await fetch("http://localhost:3000/api/users/register" , {
+            // http://localhost:3000/api/users/register
+            const res = await fetch("https://job-finder-l5ed.onrender.com" , {
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json',
