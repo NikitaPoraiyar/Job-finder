@@ -1,6 +1,6 @@
 import React from "react"
 import styles from '../styles/login.module.css';
-import sideBanner from '../assets/sideBanner.png'
+import sideBanner from '../assets/sidebanner.png'
 
 export default function Login(){
     return(
