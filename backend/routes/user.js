@@ -1,6 +1,6 @@
 import express from 'express';
 import user from '../models/user.js';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import {errorLogger} from '../middleware/log.js';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
