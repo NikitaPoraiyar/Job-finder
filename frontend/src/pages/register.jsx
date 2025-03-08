@@ -15,7 +15,7 @@ export default function Register(){
         event.preventDefault()
         try{
             // http://localhost:3000/api/users/register
-            const res = await fetch("https://job-finder-l5ed.onrender.com" , {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/users/register` , {
                 method: 'POST',
                 headers: {
                     'Content-Type' : 'application/json',

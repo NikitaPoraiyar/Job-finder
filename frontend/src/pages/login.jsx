@@ -1,8 +1,34 @@
 import React from "react"
 import styles from '../styles/login.module.css';
-import sideBanner from '../assets/sidebanner.png'
+import sideBanner from '../assets/sidebanner.png';
+import { useState } from "react";
 
 export default function Login(){
+    const [formData, setFormData] = useState({
+        email:"",
+        password:""
+    })
+    const handleSubmit = async (event) => {
+        event.preventDefault()
+        try{
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/users/login`, {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            res.status === 200 ? alert('Login successful') : alert('Login Failed')
+            const data = await res.json()
+            console.log(data)
+            const token = data.token
+            localStorage.setItem("token", token)
+        }
+        catch(e){
+            console.log(e);
+            alert('Login Failed')
+        }
+    }
     return(
         <div className={styles.main_login_container}>
             <div className={styles.left_login_container}>
@@ -10,9 +36,13 @@ export default function Login(){
                     <h1 className={styles.login_header}>Already have an Account?</h1>
                     <p className={styles.login_header2}> Your personal job finder is here</p>
 
-                    <form>
-                        <input type="email" className={styles.login_input_field} placeholder="Email" required />
-                        <input type="password" className={styles.login_input_field} placeholder="Password" required />
+                    <form onSubmit={handleSubmit}>
+                        <input value={formData.email} type="email" className={styles.login_input_field} placeholder="Email" onChange={(e) => setFormData({
+                            ...formData, email: e.target.value
+                        })} required />
+                        <input value={formData.password} type="password" className={styles.login_input_field} placeholder="Password" onChange={(e) => setFormData({
+                            ...formData, password: e.target.value
+                        })} required />
                         <button type="submit" className={styles.sign_in_btn}>Sign In</button>
                     </form>
 
