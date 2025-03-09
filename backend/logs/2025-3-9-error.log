@@ -1,0 +1,3 @@
+[2025-03-09T12:36:01.940Z] TypeError: res.statusCode is not a function
+    at file:///D:/Cuvette/CapstoneProject/Backend/backend/routes/job.js:42:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

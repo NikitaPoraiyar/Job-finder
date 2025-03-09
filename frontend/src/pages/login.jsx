@@ -2,8 +2,10 @@ import React from "react"
 import styles from '../styles/login.module.css';
 import sideBanner from '../assets/sidebanner.png';
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Login(){
+    const navigate = useNavigate()
     const [formData, setFormData] = useState({
         email:"",
         password:""
@@ -18,11 +20,14 @@ export default function Login(){
                 },
                 body: JSON.stringify(formData),
             })
-            res.status === 200 ? alert('Login successful') : alert('Login Failed')
-            const data = await res.json()
-            console.log(data)
-            const token = data.token
-            localStorage.setItem("token", token)
+            if(res.status === 200){
+                alert('Login successful')
+                const data = await res.json()
+                console.log(data)
+                const token = data.token
+                localStorage.setItem("token", token)
+                navigate('/newJob')
+            } else { throw new Error("Login failed") }
         }
         catch(e){
             console.log(e);

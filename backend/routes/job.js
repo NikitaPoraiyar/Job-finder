@@ -21,9 +21,11 @@ router.get('/', async(req,res) => {
     res.status(200).json(jobs);
 });
 //create all jobs
-router.post('/', authMiddleware, async(res, req) => {
+router.post('/', authMiddleware, async(req, res) => {
     try{
+        console.log("Request: ", req.body);
         const {title, description, location, salary, company, skills, remote, type}= req.body;
+        
         const jobSkills = skills.split(",").map(skill => skill.trim());
         const newJob = new job({
             title,
@@ -37,7 +39,9 @@ router.post('/', authMiddleware, async(res, req) => {
             createdBy: req.user._id
         });
         await newJob.save();
-        res.statusCode(200).json(newJob);
+
+        
+        res.status(200).json(newJob);
     }
     catch(err){
         errorLogger(err, req, res);
@@ -46,8 +50,8 @@ router.post('/', authMiddleware, async(res, req) => {
 //get a job by id
 router.get('/:id', async(req, res) => {
     try{
-        const job = await job.findById(req.params.id);
-        if(!job){
+        const dbJob = await job.findById(req.params.id);
+        if(!dbJob){
             return res.status(404).json({
                 error:{
                     message: "Job not found",
@@ -55,7 +59,7 @@ router.get('/:id', async(req, res) => {
                 }
             });
         }
-        res.status(200).json(job);
+        res.status(200).json(dbJob);
     }
     catch(err){
         errorLogger(err, req, res);
@@ -64,8 +68,8 @@ router.get('/:id', async(req, res) => {
 // edit a job 
 router.put('/:id', authMiddleware, async (req, res) => {
     try {
-        const job = await job.findById(req.params.id);
-        if (!job) {
+        const dbJob = await job.findById(req.params.id);
+        if (!dbJob) {
             return res.status(404).json({ 
                 error: { 
                     message: "Job not found", 
@@ -73,7 +77,9 @@ router.put('/:id', authMiddleware, async (req, res) => {
                 } 
             });
         }
-        if (job.createdBy.toString() !== req.user._id.toString()) {
+        console.log(res.user)
+        console.log(dbJob)
+        if (dbJob.createdBy.toString() !== req.user._id.toString()) {
             return res.status(401).json({ 
                 error: { 
                     message: "You are not authorized to update this job", 
