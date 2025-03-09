@@ -11,7 +11,7 @@ import {errorLogger} from "./middleware/log.js";
 
 dotenv.config();
 
-const a
+const app = express();
 const port = process.env.PORT || 3000;pp = express();
 
 app.use(bodyParser.json());
