@@ -15,11 +15,10 @@
       "destination": "https://job-finder-l5ed.onrender.com/api/$1"
     }
   ],
-  "redirects": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html",
-      "statusCode": 200
+      "src": "/.*",
+      "dest": "/index.html"
     }
   ]
 }
