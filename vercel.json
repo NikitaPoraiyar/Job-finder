@@ -4,5 +4,11 @@
             "source": "/api/(.*)",
             "destination": "https://job-finder-l5ed.onrender.com/api/$1"
         }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/index.html"
+        }
     ]
 }
