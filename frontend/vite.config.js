@@ -3,14 +3,14 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: "/", 
+  base: "/",
   build: {
     outDir: "dist"
   },
   server: {
     proxy: {
       "/api": {
-        target: "https://job-finder-l5ed.onrender.com",
+        target: process.env.VITE_API_URL,
         changeOrigin: true,
         secure: false
       }
