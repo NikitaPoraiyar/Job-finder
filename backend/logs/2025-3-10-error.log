@@ -1,0 +1,39 @@
+[2025-03-10T13:33:14.074Z] ValidationError: Job validation failed: type: `Part time` is not a valid enum value for path `type`.
+    at Document.invalidate (D:\Cuvette\CapstoneProject\Backend\backend\node_modules\mongoose\lib\document.js:3329:32)
+    at D:\Cuvette\CapstoneProject\Backend\backend\node_modules\mongoose\lib\document.js:3090:17
+    at D:\Cuvette\CapstoneProject\Backend\backend\node_modules\mongoose\lib\schemaType.js:1407:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2025-03-10T13:34:28.219Z] ValidationError: Job validation failed: type: `Part time` is not a valid enum value for path `type`.
+    at Document.invalidate (D:\Cuvette\CapstoneProject\Backend\backend\node_modules\mongoose\lib\document.js:3329:32)
+    at D:\Cuvette\CapstoneProject\Backend\backend\node_modules\mongoose\lib\document.js:3090:17
+    at D:\Cuvette\CapstoneProject\Backend\backend\node_modules\mongoose\lib\schemaType.js:1407:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2025-03-10T13:34:47.051Z] ValidationError: Job validation failed: type: `Part time` is not a valid enum value for path `type`.
+    at Document.invalidate (D:\Cuvette\CapstoneProject\Backend\backend\node_modules\mongoose\lib\document.js:3329:32)
+    at D:\Cuvette\CapstoneProject\Backend\backend\node_modules\mongoose\lib\document.js:3090:17
+    at D:\Cuvette\CapstoneProject\Backend\backend\node_modules\mongoose\lib\schemaType.js:1407:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)
+[2025-03-10T13:37:06.155Z] TypeError: Cannot read properties of undefined (reading 'toString')
+    at file:///D:/Cuvette/CapstoneProject/Backend/backend/routes/job.js:82:29
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2025-03-10T13:37:21.178Z] TypeError: Cannot read properties of undefined (reading 'toString')
+    at file:///D:/Cuvette/CapstoneProject/Backend/backend/routes/job.js:82:29
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2025-03-10T13:38:57.936Z] TypeError: Cannot read properties of undefined (reading 'toString')
+    at file:///D:/Cuvette/CapstoneProject/Backend/backend/routes/job.js:82:29
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2025-03-10T13:42:28.980Z] TypeError: Cannot read properties of undefined (reading 'toString')
+    at file:///D:/Cuvette/CapstoneProject/Backend/backend/routes/job.js:82:29
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2025-03-10T13:43:35.435Z] TypeError: Cannot read properties of undefined (reading 'toString')
+    at file:///D:/Cuvette/CapstoneProject/Backend/backend/routes/job.js:82:29
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2025-03-10T13:45:51.515Z] TypeError: Cannot read properties of undefined (reading 'toString')
+    at file:///D:/Cuvette/CapstoneProject/Backend/backend/routes/job.js:82:29
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2025-03-10T13:46:08.898Z] TypeError: Cannot read properties of undefined (reading 'toString')
+    at file:///D:/Cuvette/CapstoneProject/Backend/backend/routes/job.js:82:29
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2025-03-10T13:51:01.393Z] TypeError: Cannot read properties of undefined (reading 'toString')
+    at file:///D:/Cuvette/CapstoneProject/Backend/backend/routes/job.js:82:29
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)

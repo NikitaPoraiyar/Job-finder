@@ -36,7 +36,7 @@ router.post('/', authMiddleware, async(req, res) => {
             skills: jobSkills,
             remote,
             type,
-            createdBy: req.user._id
+            createdBy: req.user.id
         });
         await newJob.save();
 
@@ -79,7 +79,7 @@ router.put('/:id', authMiddleware, async (req, res) => {
         }
         console.log(res.user)
         console.log(dbJob)
-        if (dbJob.createdBy.toString() !== req.user._id.toString()) {
+        if (dbJob.createdBy.toString() !== req.user.id.toString()) {
             return res.status(401).json({ 
                 error: { 
                     message: "You are not authorized to update this job", 
