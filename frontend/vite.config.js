@@ -9,7 +9,11 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api': 'https://job-finder-l5ed.onrender.com'
+      '/api': {
+        target: 'https://job-finder-l5ed.onrender.com',
+        changeOrigin: true,
+        secure: false
+      }
     }
   }
 });
