@@ -5,10 +5,15 @@
             "destination": "https://job-finder-l5ed.onrender.com/api/$1"
         }
     ],
-    "routes": [
+    "headers": [
         {
-            "src": "/(.*)",
-            "dest": "/index.html"
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "no-cache"
+                }
+            ]
         }
     ]
 }
