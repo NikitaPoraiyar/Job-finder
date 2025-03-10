@@ -3,17 +3,10 @@
         {
             "source": "/api/(.*)",
             "destination": "https://job-finder-l5ed.onrender.com/api/$1"
-        }
-    ],
-    "headers": [
+        },
         {
             "source": "/(.*)",
-            "headers": [
-                {
-                    "key": "Cache-Control",
-                    "value": "no-cache"
-                }
-            ]
+            "destination": "/index.html"
         }
     ]
 }
