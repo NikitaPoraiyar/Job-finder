@@ -7,6 +7,10 @@ import dotenv from 'dotenv';
 dotenv.config();
 const router = express.Router();
 
+router.get('/', (req, res) => {
+    res.status(200).json({ message: "User API is working!" });
+});
+
 router.post('/register', errorLogger, async(req,res) => {
     try{
         const {name, username, email, phone, password} = req.body;
