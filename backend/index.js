@@ -22,10 +22,7 @@ app.use('/api/jobs', jobRoutes);
 
 const connectDB = async () => {
     try{
-        await mongoose.connect(process.env.MONGODB_URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
+        await mongoose.connect(process.env.MONGODB_URI);
         console.log("Connecting to MongoDB");
     } catch(error) {
         console.log("Error connecting to MongoDB:", error);
