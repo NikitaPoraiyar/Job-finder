@@ -3,46 +3,6 @@
     padding: 0;
 }
 
-/* .main_register_container{
-    display: flex;
-    justify-content: space-between;
-    
-} */
-
-/* .left_register_container{
-    border: solid 2px black;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 70%;
-    text-align: center;
-}
-
-.left_register_container > p{
-    color: #525252;
-}
-
-.top_register_container{
-    padding-bottom: 20px;
-    
-    
-}
-
-.top_register_container > h1{
-    font-size: 40px;
-}
-
-.right_register_container{
-    height: 100vh;
-    overflow: hidden;
-}
-
-.right_register_container > img{
-    height: 100vh;
-}
- */
-
-
 .main_register_container{
     display: flex;
     width: 100%;

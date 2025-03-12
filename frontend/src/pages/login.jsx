@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import styles from '../styles/login.module.css';
 import sideBanner from '../assets/sidebanner.png';
 import { useState } from "react";

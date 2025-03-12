@@ -34,6 +34,18 @@ const job = new mongoose.Schema({
         enum:['Full Time', 'Part Time', 'Contract', 'Internship'],
         required:true
     },
+    logoURL:{
+        type: String,
+        required: true
+    },
+    aboutCompany:{
+        type: String,
+        required:true
+    },
+    information:{
+        type: String,
+        required: true
+    },
     createdAt:{
         type:Date,
         default:Date.none
